@@ -1,0 +1,33 @@
+{
+    "name": "colibri-platform/project-basic",
+    "description": "Skeletton for a basic Colibri based project.",
+    "keywords": ["yii2", "project", "colibri", "basic"],
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "colibri-platform/base" : "@dev"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset":{
+            "installer-paths": {
+                "bower-asset-library": "vendor/bower"
+            },
+             "ignore-files": {
+                "bower-asset/bootstrap": [
+                    "!dist",
+                    "*"
+                ],
+                "bower-asset/jquery": [
+                    "!dist",
+                    "*"
+                ]
+            }
+        }
+    }
+
+}
