@@ -44,17 +44,14 @@ class DefaultController extends Controller
     {
         $model = new ContactForm();
 
-        $contactEmail = Yii::$app->settings->get('contact.email');
-
-        if ($model->load(Yii::$app->request->post()) && $model->contact($contactEmail)) {
+        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
 
             return $this->refresh();
         }
 
         return $this->render('contact', [
-            'model' => $model,
-            'contactEmail' => $contactEmail
+            'model' => $model
         ]);
     }
 }

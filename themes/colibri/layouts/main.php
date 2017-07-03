@@ -47,7 +47,8 @@ SiteAsset::register($this);
         'items' => [
             ['label' => 'Home', 'url' => ['/']],
             ['label' => 'Contact', 'url' => ['/site/default/contact']],
-            ['label' => 'Login', 'url' => ['/admin/login'], 'visible' => Yii::$app->user->isGuest ],
+            ['label' => 'Login', 'url' => ['/user/security/login'], 'visible' => Yii::$app->user->isGuest ],
+            ['label' => 'Profil', 'url' => ['/user/settings'], 'visible' => !Yii::$app->user->isGuest ],
             ['label' => 'Logout', 'url' => ['/user/security/logout'], 'visible' => !Yii::$app->user->isGuest,
                         'linkOptions' => ['data-method' => 'post']],
         ],

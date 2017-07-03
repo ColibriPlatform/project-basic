@@ -15,12 +15,6 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-contact">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <?php if (!$contactEmail): ?>
-      <div class="alert alert-warning">
-            No contact email defined. Please set-up the key 'email' in the section 'contact' in <?= Html::a('admin', ['/admin/settings/']) ?>
-      </div>
-    <?php endif ?>
-
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 
         <div class="alert alert-success">

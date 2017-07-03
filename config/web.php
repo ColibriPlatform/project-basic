@@ -22,6 +22,9 @@ $config = [
             'class' => 'app\modules\site\Module',
         ],
     ],
+    'params' => [
+        'adminEmail' => 'admin@example.com',
+    ],
 ];
 
 if (YII_ENV_DEV) {
