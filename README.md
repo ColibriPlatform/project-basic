@@ -6,7 +6,7 @@ Basic Skeletton to build a Colibri based application
 
 ```bash
 composer global require "fxp/composer-asset-plugin:^1.3.1"
-composer create-project colibri-platform/project-basic colibri-basic
+composer create-project --stability dev colibri-platform/project-basic colibri-basic
 ```
 
 ## 2. Run
